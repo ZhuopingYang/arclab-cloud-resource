@@ -87,7 +87,7 @@ root@versal-rootfs-common-2021_1:/mnt/sd-mmcblk0p1# reboot
 ```
 ![Alt text](images/011.png)
 
-#### If everything is ok, you can test your bitstream on VCK190. Please close the serial port after using it. (using **ctrl+a+x** to exit picocom)
+#### If everything is ok, you can test your bitstream on VCK190. Please **leave your binaries on VCK190** and **close the serial port** after using it. (using **ctrl+a+x** to exit picocom)
 ![Alt text](images/012.png)
 ---
 
