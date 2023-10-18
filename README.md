@@ -1,13 +1,13 @@
 ### This document shows how to use the cloud resources at arc-research-lab
 
 ### CPU server
-Our server is maintained using [Opennebula](https://opennebula.io/), you can login using your username and password at [https://res.arc-lab.work/](https://res.arc-lab.work/)
+Our server is maintained using [Opennebula](https://opennebula.io/), you can log in using your username and password at [https://res.arc-lab.work/](https://res.arc-lab.work/)
 
 Currently, two templates are available for you to use, and you can use the Vitis tools in **Ubuntu 20.04 Vitis**
 
 ![Alt text](images/001.png)
 
-You can modify the *Capacity* tab to allocte computing resources as needed. 
+You can modify the *Capacity* tab to allocate computing resources as needed. 
 ![Alt text](images/002.png)
 
 Once the virtual machine has been successfully deployed, you can find its IP address. 
@@ -33,7 +33,7 @@ Currently, our server cannot access the public network directly, but we provide 
 export all_proxy=socks5://172.16.100.4:4321
 curl ipinfo.io
 ```
-If it works, you can see the data from [ipinfo.io](ipinfo.io)
+If it works, you can see the data from [ipinfo.io](https://ipinfo.io/)
 ![Alt text](images/005.png)
 
 This proxy server can be used for **apt** as well:
@@ -42,7 +42,7 @@ sudo apt install xxx --option Acquire::HTTP::Proxy=http://172.16.100.4:4321
 ```
 ---
 ### Xilinx Versal VCK190
-Currently, our vck190 is connected with a Raspberry Pi and we use serial port and ethernet to access the board.
+Currently, our vck190 is connected to a Raspberry Pi and we use serial port and ethernet to access the board.
 ![Alt text](images/006.png)
 
 Similar to the CPU server, you can add the following to the ssh config file. Note that, you do not have to specify the Port in the jump this case.
@@ -62,7 +62,7 @@ Before uploading any bitstream to vck190, please try to open the serial port fir
 ```bash
 picocom -b 115200 /dev/ttyUSB1
 ```
-You cannot open the serial port when other people are using the port.
+You cannot open the serial port if someone else is using the port.
 ![Alt text](images/007.png)
 If you have waited for a long time, you can find who is using the port and contact us.
 ![Alt text](images/008.png)
@@ -81,7 +81,7 @@ Then, you can copy your binaries to /mnt/sd-mmcblk0p1 from the Raspberry Pi.
 ssh * root@192.168.10.3:/mnt/sd-mmcblk0p1/ # passwd: root
 ```
 
-After the copy is finished, reboot VCK190 and check the MULTIBOOT value in the boot log. It should be 0xF0000000, otherwise the copy process may have fail and please contact us to fix it.
+After the copy is finished, reboot VCK190 and check the MULTIBOOT value in the boot log. It should be 0xF0000000, otherwise, the copy process may have failed and please contact us to fix it.
 ```bash
 root@versal-rootfs-common-2021_1:/mnt/sd-mmcblk0p1# reboot
 ```
