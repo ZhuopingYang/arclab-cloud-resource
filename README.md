@@ -1,7 +1,7 @@
 ### This document shows how to use the cloud resources at arc-research-lab
 
 ### CPU server
-Our server is maintained using [Opennebula](https://opennebula.io/), you can login using your username and password at [https://cloud.arc-lab.work/](https://cloud.arc-lab.work/)
+Our server is maintained using [Opennebula](https://opennebula.io/), you can login using your username and password at [https://res.arc-lab.work/](https://res.arc-lab.work/)
 
 Currently, two templates are available for you to use, and you can use the Vitis tools in **Ubuntu 20.04 Vitis**
 
