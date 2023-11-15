@@ -1,7 +1,7 @@
 ### This document shows how to use the cloud resources at arc-research-lab
 
 ### CPU server
-Our server is maintained using [Opennebula](https://opennebula.io/), you can log in using your username and password at [https://res.arc-lab.work/](https://res.arc-lab.work/)
+Our server is maintained using [Opennebula](https://opennebula.io/), you can log in using your username and password at [https://temp-res.arc-lab.work/](https://temp-res.arc-lab.work/)
 
 Currently, two templates are available for you to use, and you can use the Vitis tools in **Ubuntu 20.04 Vitis**
 
@@ -16,7 +16,7 @@ Once the virtual machine has been successfully deployed, you can find its IP add
 To connect this virtual machine, you can add the following configurations to your ssh config file (~/.ssh/config). Then, you should be able to connect to the VM using **ssh Test_Server**. By default, the **username** of the VM is **arclab** and the **password** is **123456**. *(please contact us if you cannot login to your VM)*
 ```bash
 Host arcserver-jump
-    HostName cloud.arc-lab.work
+    HostName temp-res.arc-lab.work
     Port 6222
     User zhuoping  [change to your username]
 
@@ -42,13 +42,14 @@ sudo apt install xxx --option Acquire::HTTP::Proxy=http://172.16.100.4:4321
 ```
 ---
 ### Xilinx Versal VCK190
+**Temporarily unavailable**
 Currently, our vck190 is connected to a Raspberry Pi and we use serial port and ethernet to access the board.
 ![Alt text](images/006.png)
 
 Similar to the CPU server, you can add the following to the ssh config file. Note that, you do not have to specify the Port in the jump this case.
 ```bash
 Host pi-jump
-    HostName cloud.arc-lab.work
+    HostName temp-res.arc-lab.work
     User zhuoping  [change to your username]
 Host arc-pi
     HostName 10.10.1.10
