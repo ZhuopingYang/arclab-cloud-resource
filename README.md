@@ -16,7 +16,7 @@ Once the virtual machine has been successfully deployed, you can find its IP add
 To connect this virtual machine, you can add the following configurations to your ssh config file (~/.ssh/config). Then, you should be able to connect to the VM using **ssh Test_Server**. By default, the **username** of the VM is **arclab** and the **password** is **123456**. *(please contact us if you cannot login to your VM)*
 ```bash
 Host arcserver-jump
-    HostName temp-res.arc-lab.work
+    HostName res.arc-lab.work
     Port 6222
     User zhuoping  [change to your username]
 
