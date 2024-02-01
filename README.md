@@ -28,18 +28,6 @@ Host Test_Server
 We have installed Vitis 2021.1, 2021.2, and 2023.1. Please feel free to contact us, if you want to use other versions of Vitis. We also have installed three packages for u250, u55c, and vck190. If you want to use other versions, please install by yourself.
 ![Alt text](images/004.png)
 
-Currently, our server cannot access the public network directly, but we provide a proxy server (**socks5://172.16.100.4:4321**). To check if the proxy server is working, you can use the following commands:
-```bash
-export all_proxy=socks5://172.16.100.4:4321
-curl ipinfo.io
-```
-If it works, you can see the data from [ipinfo.io](https://ipinfo.io/)
-![Alt text](images/005.png)
-
-This proxy server can be used for **apt** as well:
-```bash
-sudo apt install xxx --option Acquire::HTTP::Proxy=http://172.16.100.4:4321
-```
 ---
 ### Xilinx Versal VCK190
 **Temporarily unavailable**
