@@ -53,6 +53,7 @@ picocom -b 115200 /dev/ttyUSB1
 ```
 You cannot open the serial port if someone else is using the port.
 ![Alt text](images/007.png)
+
 If you have waited for a long time, you can find who is using the port and contact us.
 ![Alt text](images/008.png)
 
