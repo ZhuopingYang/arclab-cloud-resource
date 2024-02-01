@@ -49,7 +49,7 @@ Currently, our vck190 is connected to a Raspberry Pi and we use serial port and 
 Similar to the CPU server, you can add the following to the ssh config file. Note that, you do not have to specify the Port in the jump this case.
 ```bash
 Host pi-jump
-    HostName temp-res.arc-lab.work
+    HostName res.arc-lab.work
     User zhuoping  [change to your username]
 Host arc-pi
     HostName 10.10.1.10
